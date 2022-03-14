@@ -1,0 +1,11 @@
+build/*.js
+src/assets
+public
+dist
+tests
+tests/*
+vue.config.js
+tsconfig.json
+manifest.json
+src/static/js/*
+src/pages/dashboard/components/*

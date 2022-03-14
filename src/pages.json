@@ -1,16 +1,38 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "我的游戏"
+      }
+    },
+    {
+      "path": "pages/bomb/index",
+      "style": {
+        "navigationBarTitleText": "💣"
+      }
+    },
+    {
+      "path": "pages/coin/index",
+      "style": {
+        "navigationBarTitleText": "🪙"
+      }
+    },
+    {
+      "path": "pages/dice/index",
+      "style": {
+        "navigationBarTitleText": "🎲"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "我的游戏",
+    "navigationBarBackgroundColor": "#ecf0f3",
+    "backgroundColor": "#ecf0f3"
+  },
+  "easycom": {
+    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+  }
 }

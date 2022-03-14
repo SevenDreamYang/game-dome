@@ -1,0 +1,9 @@
+.local
+.output.js
+/node_modules/**
+manifest.json
+tsconfig.json
+**/*.svg
+**/*.sh
+
+/public/*

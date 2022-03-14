@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+// 计算百分比
+@function ptr($a, $b) {
+  @return percentage(floor($a / $b * 10000000) / 10000000);
+}
+
+@mixin oneline {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin moreline($n) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $n;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+}
+
+@mixin gridCalc($total, $space) {
+  .ht {
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: flex-start;
+      padding-right: $space;
+      padding-left: $space;
+
+      & > [class*='ht-col-'] {
+        padding-left: $space;
+        padding-right: $space;
+        box-sizing: border-box;
+      }
+    }
+
+    @for $var from 1 through $total {
+      &-col-#{$var} {
+        width: ptr($var, $total);
+      }
+    }
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0rpx 16rpx 48rpx 2rpx rgba(83.00000265240669, 89.00000229477882, 144.00000661611557, 0.07000000029802322);
+}

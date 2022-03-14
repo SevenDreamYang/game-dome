@@ -13,15 +13,21 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "types": [
+      "./src/*",
       "webpack-env",
       "@dcloudio/types",
       "miniprogram-api-typings",
       "mini-types"
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@@/*": [ "/"],
+      "@/*": [ "./src/*"],
+      "@store/*":["./src/store/*"],
+      "@com/*": [ "./src/components/*"],
+      "@api/*": [ "./src/api/*"],
+      "@utils/*": [ "./src/utils/*"],
+      "@mixins/*": [ "./src/mixins/*"],
+      "@img/*": [ "./src/static/images/*"],
     },
     "lib": [
       "esnext",
