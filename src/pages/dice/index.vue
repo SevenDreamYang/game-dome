@@ -15,7 +15,7 @@
       </view>
     </view>
     <view class="button-view">
-      <button class="rest-btn drop-shadow" @click="starGame">测试</button>
+      <button class="rest-btn drop-shadow" @click="starGame">开摇</button>
     </view>
   </view>
 </template>
@@ -33,7 +33,7 @@ import { showloading, hideLoading } from '@utils/index';
 export default class App extends Vue {
   private readonly MAX_POINT = 6;
   private dice_array: number[] = [];
-  private QUANTITY = 1;
+  private QUANTITY = 6;
 
   created() {
     this.init();
@@ -62,11 +62,11 @@ export default class App extends Vue {
 
 <style scoped lang="scss">
 .dice {
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 800rpx;
+  // height: 800rpx;
   &_item {
     width: 300rpx;
     height: 300rpx;
